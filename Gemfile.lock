@@ -1,0 +1,26 @@
+PATH
+  remote: .
+  specs:
+    bluster (0.0.1-java)
+      ordasity-jars (~> 0.5.3)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    diff-lcs (1.2.4)
+    ordasity-jars (0.5.3-java)
+    rspec (2.13.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    rspec-core (2.13.1)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.1)
+
+PLATFORMS
+  java
+
+DEPENDENCIES
+  bluster!
+  rspec
