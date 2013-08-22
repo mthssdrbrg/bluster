@@ -7,7 +7,7 @@ module Bluster
         Bluster::ClusterConfig.create({
           hosts: 'localhost:2181,localhost:2182',
           auto_rebalance: true,
-          rebalance_interval: 60,
+          rebalance_interval: 10,
           drain_time: 10,
           smart_balancing: true,
           zk_timeout: 2000,
@@ -22,7 +22,7 @@ module Bluster
       it 'creates a Ordasity::ClusterConfig object with given options' do
         config.hosts.should == 'localhost:2181,localhost:2182'
         config.enableAutoRebalance.should be_true
-        config.autoRebalanceInterval.should == 60
+        config.autoRebalanceInterval.should == 10
         config.drainTime.should == 10
         config.useSmartBalancing.should be_true
         config.zkTimeout.should == 2000
