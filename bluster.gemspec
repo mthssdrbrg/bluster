@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Bluster::VERSION
   s.platform    = 'java'
   s.authors     = ['Mathias Söderberg']
-  s.email       = ['mathias.soederberg@gmail.com']
+  s.email       = ['mths@sdrbrg.se']
   s.homepage    = 'http://github.com/mthssdrbrg/bluster'
   s.summary     = %q{Bluster is a thin JRuby wrapper for Ordasity}
   s.description = %q{}
