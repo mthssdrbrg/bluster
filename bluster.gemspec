@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'ordasity-jars', '~> 0.5.3'
   s.add_development_dependency 'rspec'
+  s.add_development_dependency 'zk'
 
   s.files         = `git ls-files`.split("\n")
   s.require_paths = %w(lib)
