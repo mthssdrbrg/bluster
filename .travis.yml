@@ -1,5 +1,5 @@
 language: ruby
-script: rspec
+script: bundle exec rspec
 bundler_args: --without development
 rvm:
   - jruby-19mode

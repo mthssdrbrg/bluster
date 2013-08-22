@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     bluster (0.5.3-java)
-      ordasity-jars (~> 0.5.3)
+      ordasity-jars (= 0.5.3)
 
 GEM
   remote: https://rubygems.org/
