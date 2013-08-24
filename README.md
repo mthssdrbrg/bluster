@@ -1,5 +1,7 @@
 # bluster
 
+[![Build Status](https://travis-ci.org/mthssdrbrg/bluster.png?branch=master)](https://travis-ci.org/mthssdrbrg/bluster)
+
 Bluster is a thin JRuby wrapper around Boundary's [Ordasity](https://github.com/boundary/ordasity), and it's purpose is
 merely to make the API a bit friendlier for (J)Ruby developers.
 
