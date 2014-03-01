@@ -7,7 +7,6 @@ require 'bluster/listener'
 
 module Bluster
   def self.create_cluster(name, listener, options = {})
-    config = Bluster::ClusterConfig.create(options)
-    Ordasity::Cluster.new(name, listener, config)
+    Ordasity::Cluster.new(name, listener, ClusterConfig.create(options))
   end
 end
