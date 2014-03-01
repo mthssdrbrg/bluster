@@ -3,13 +3,11 @@
 module Bluster
   class ClusterConfig
     def self.create(options = {})
-      config = Ordasity::ClusterConfig.new
-
-      options.each do |option, value|
-        config.send(wrap_with_prefix(option), value)
+      Ordasity::ClusterConfig.new.tap do |config|
+        options.each do |option, value|
+          config.send(wrap_with_prefix(option), value)
+        end
       end
-
-      config
     end
 
     def self.wrap_with_prefix(option)
@@ -20,6 +18,8 @@ module Bluster
       PREFIXES[option] || SET_PREFIX
     end
 
+    private
+
     SET_PREFIX = 'set'.freeze
     UNDERSCORE = '_'.freeze
 
@@ -27,6 +27,5 @@ module Bluster
       soft_handoff: 'set_use',
       smart_balancing: 'use'
     }.freeze
-
   end
 end
