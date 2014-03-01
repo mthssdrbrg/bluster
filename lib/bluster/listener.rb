@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Bluster
   module RubyesqueListenerCallbacks
     def joined(client); end
