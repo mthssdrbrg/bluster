@@ -33,10 +33,10 @@ class SimpleListener < Bluster::ClusterListener
 end
 
 cluster_options = {
-  hosts: 'localhost:2181',
-  zk_timeout: 5,
-  drain_time: 1,
-  rebalance_interval: 1,
+  :hosts => 'localhost:2181',
+  :zk_timeout => 5,
+  :drain_time => 1,
+  :rebalance_interval => 1,
 }
 
 cluster = Bluster.create_cluster('simple', SimpleListener.new, cluster_options)
@@ -47,8 +47,8 @@ sleep 3
 cluster.shutdown
 ```
 
-There is also a very similar example in ```examples/simple.rb```, though it
-should be mentioned that it requires the ```zk``` gem as well (which is included
+There is also a very similar example in `examples/simple.rb`, though it
+should be mentioned that it requires the `zk` gem as well (which is included
 as a development dependency in the gemspec).
 
 The aim of the examples was actually to have a cluster with two listeners, but
@@ -64,8 +64,8 @@ gem install bluster
 
 ## Known issues and limitations
 
-* It is not possible to override ```#initialize``` when subclassing one of the
-  listener classes (```Bluster::ClusterListener```, ```Bluster::SmartListener```).
+* It is not possible to override `#initialize` when subclassing one of the
+  listener classes (`Bluster::ClusterListener`, `Bluster::SmartListener`).
   I'm not really sure _WHY_, but there's probably a good reason.
   Thinking about adding some kind of convenience method / option to circumvent this.
 
@@ -74,7 +74,7 @@ gem install bluster
 Talk in a loud, aggressive, or indignant way with little effect.
 
 ## Copyright
-Copyright 2013 Mathias Söderberg
+Copyright 2013-2014 Mathias Söderberg
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this file except in compliance with the License. You may obtain a copy of the
